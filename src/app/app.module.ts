@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { WeatherCardComponent } from './home/weather-card/weather-card.component';
+import { AddCityCardComponent } from './home/add-city-card/add-city-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    WeatherCardComponent,
+    AddCityCardComponent,
   ],
   imports: [
     BrowserModule,
