@@ -1,10 +1,15 @@
-<aside class="side-menu_container" [ngClass]="{'side-menu__container-active': ''}">
+<div class="root__container">
+<div class="side-menu_container" [ngClass]="{'side-menu__container-active': ''}">
   <nav class="slide-menu" >
     <section class="menu-header">
       <span class="greeting-text">Weathery Time!</span>
       <div class="user-image__container">
         <img src="" alt="user-image" class="user__image">
       </div>
+      <div class="user-details">
+        <span class="name__text">Ivan</span>
+        <span class="email__text">test@test.com</span>
+    </div>
     </section>
     <section class="menu-body">
 
@@ -13,18 +18,26 @@
 
     </section>
   </nav>
-</aside>
-<div class="root__container">
+</div>
+<div class="content__container">
   <header class="main__header">
-    <div class="">
-      <svg></svg>
-      <svg></svg>
+    <div class="left__section">
+      <svg class="menu__icon">
+        <use xlink:href="./assets/img/sprite.svg#icon-menu"></use>
+      </svg>
+      <svg class="logo__icon">
+        <use xlink:href="./assets/img/sprite.svg#icon-sun"></use>
+      </svg>
+      <h3 class="logo__text">Weathery</h3>
     </div>
-    <h3 class="date_text">Today</h3>
+    <h3 class="date__text">Today</h3>
   </header>
-    <app-home></app-home>
+    <main class="main__container">
+      <app-home></app-home>
+    </main>
     <footer class="main__footer">
       <small class="copyright__text">Copyright © 2020 IvanEntwickler</small>
     </footer>
+</div>
 </div>
 
