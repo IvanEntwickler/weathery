@@ -1,0 +1,130 @@
+
+////// Weather-Card Layout
+
+.weather-card{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  cursor: pointer;
+  width: 20rem;
+  height: 30rem;
+  background-color: white;
+  padding: 2rem;
+  margin: 5rem; /// limited!!!!
+  border-radius: 7.5%;
+  box-shadow: 0 0 2rem rgba(0,0,0, .1);
+  animation: 1.25s ease-in-out 0ms 1 fadein;
+}
+
+////// City-Name
+
+.city_name{
+  display: flex;
+  justify-content: center;
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+
+}
+
+
+.weather-icon__container{
+  width: 20rem;
+  height: 20rem;
+
+  svg{
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+//// Temperature
+
+.temperature__container{
+  display: flex;
+  justify-content: center;
+}
+
+.temperature__text{
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.temperature__feature-text{
+  text-transform: uppercase;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  margin-right: 2rem ;
+}
+
+
+///// Weather-Condition
+
+.weather-condition__text{
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  margin-bottom: 3rem;
+
+}
+
+///// Min Temperature
+
+.min-max__container{
+  display:flex;
+  justify-content: space-between;
+}
+.min__container{
+
+}
+.min-arrow__icon{
+  width: 1rem;
+  height: 1rem;
+}
+
+.min-temperature__text{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.min__text{
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  color:rgb(3, 175, 187);
+}
+
+///// Max Temperature
+
+.max__container{
+
+}
+.max-arrow__icon{
+  width: 1rem;
+  height: 1rem;
+}
+
+.max-temperature__text{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+
+}
+.max__text{
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  color:red;
+}

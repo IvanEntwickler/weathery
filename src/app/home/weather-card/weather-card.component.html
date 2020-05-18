@@ -1,1 +1,48 @@
-<p>weather-card works!</p>
+<section class="weather-card">
+  <span class="city_name">{{ cityName }}</span>
+  <div class="weather-icon__container" [ngSwitch]= "true">
+
+    <svg *ngSwitchCase="condition === 'Sunny'">
+      <use xlink:href="../../assets/img/sprite.svg#icon-sun"></use>
+    </svg>
+    <svg *ngSwitchCase="condition === 'Snowy'">
+      <use xlink:href="../../assets/img/sprite.svg#icon-snowy"></use>
+    </svg>
+    <svg *ngSwitchCase="condition === 'Cloudy'">
+      <use xlink:href="../../assets/img/sprite.svg#icon-cloudy"></use>
+    </svg>
+    <svg *ngSwitchCase="condition === 'Rainy'">
+      <use xlink:href="../../assets/img/sprite.svg#icon-rainy"></use>
+    </svg>
+    <svg *ngSwitchCase="condition === 'Lightning'">
+      <use xlink:href="../../assets/img/sprite.svg#icon-lightning"></use>
+    </svg>
+    <svg *ngSwitchCase="condition === 'Sunny' && 'Cloudy'">
+      <use xlink:href="../../assets/img/sprite.svg#icon-cloudy1"></use>
+    </svg>
+  </div>
+  <div class="temperature__container">
+    <span class="temperature__text">{{ currentTemp }}</span>
+    <span class="temperature__feature-text">°</span>
+    <span class="weather-condition__text">{{ condition }}</span>
+  </div>
+
+
+<div class="min-max__container">
+  <div class="min__container">
+    <svg class="min-arrow__icon">
+      <use xlink:href="../../assets/img/sprite.svg#icon-arrow-down2"></use>
+    </svg>
+    <span class="min-temperature__text">{{ minTemp }}°</span><br>
+    <span class="min__text">Min</span>
+  </div>
+  <div class="min__container">
+    <svg class="max-arrow__icon">
+      <use xlink:href="../../assets/img/sprite.svg#icon-arrow-up2"></use>
+    </svg>
+    <span class="max-temperature__text">{{ maxTemp }}°</span><br>
+    <span class="max__text">Max</span>
+  </div>
+</div>
+
+</section>
