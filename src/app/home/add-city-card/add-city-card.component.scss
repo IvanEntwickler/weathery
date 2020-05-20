@@ -1,0 +1,41 @@
+.city-card__container{
+  display:grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  width: 20rem;
+  height: 30rem;
+  border-radius: 7.5%;
+  box-shadow: 0 0 2rem rgba(0,0,0, .1);
+  animation: 1.25s ease-in-out 0ms 1 fadein;
+  background-color: white;
+  padding: 2rem;
+}
+
+.text__container{
+  display:flex;
+  justify-content: center;
+}
+
+.city-card__text{
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+}
+
+.icon__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+}
+
+.plus__icon{
+  width: 12rem;
+  height: 12rem;
+}
+
+.city__icon{
+  width: 20rem;
+  height: 15rem;
+}

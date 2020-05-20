@@ -1,1 +1,17 @@
-
+.main__container{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 0.5fr));
+  grid-template-rows: 1fr;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  align-items: center;
+  gap: 10rem;
+  justify-items: center;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  // opacity: 0;
+  background: white;
+  transition: opacity 300ms linear;
+}

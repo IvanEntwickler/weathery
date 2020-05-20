@@ -4,13 +4,11 @@
 .weather-card{
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  cursor: pointer;
+  grid-template-rows: repeat(3, 1fr);
   width: 20rem;
   height: 30rem;
   background-color: white;
   padding: 2rem;
-  margin: 5rem; /// limited!!!!
   border-radius: 7.5%;
   box-shadow: 0 0 2rem rgba(0,0,0, .1);
   animation: 1.25s ease-in-out 0ms 1 fadein;
@@ -82,7 +80,8 @@
   justify-content: space-between;
 }
 .min__container{
-
+display:flex;
+align-items: center;
 }
 .min-arrow__icon{
   width: 1rem;
@@ -102,12 +101,14 @@
   font-weight: 300;
   letter-spacing: 0.1rem;
   color:rgb(3, 175, 187);
+  margin-left: 0.25rem;
 }
 
 ///// Max Temperature
 
 .max__container{
-
+  display:flex;
+  align-items: center;
 }
 .max-arrow__icon{
   width: 1rem;
@@ -127,4 +128,5 @@
   font-weight: 300;
   letter-spacing: 0.1rem;
   color:red;
+  margin-left: 0.25rem;
 }
