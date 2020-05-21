@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherCardComponent implements OnInit {
   cityName = 'Berlin';
-  condition = 'Sunny';
+  condition = 'Sunny Cloudy';
   currentTemp = 20;
   minTemp = 13;
   maxTemp = 28;

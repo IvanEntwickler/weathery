@@ -5,8 +5,8 @@
   display:grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  width: 20rem;
-  height: 30rem;
+  width: 22rem;
+  height: 35rem;
   background-color: white;
   padding: 2rem;
   border-radius: 7.5%;
@@ -28,13 +28,54 @@
 
 
 .weather-icon__container{
-  width: 20rem;
-  height: 20rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 22rem;
+  height: 22rem;
 
   svg{
-    width: 20rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
   }
+
+  .sunny__icon{
+    fill: gold;
+  }
+  .snowy__icon{
+    fill:lightblue;
+  }
+  .cloudy__icon{
+    fill: rgb(223, 204, 204);
+  }
+  .rainy__icon{
+    fill: rgb(3, 61, 88);
+  }
+  .lightning__icon{
+    fill: rgb(209, 231, 241);
+  }
+  .sunnyCloud__icon{
+    fill: rgb(247, 232, 152);
+  }
+}
+
+
+
+////// Condition-Container
+
+.condition__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ///// Weather-Condition
+
+.weather-condition__text{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
 }
 
 //// Temperature
@@ -42,6 +83,7 @@
 .temperature__container{
   display: flex;
   justify-content: center;
+  margin-bottom: 2.25rem;
 }
 
 .temperature__text{
@@ -58,20 +100,9 @@
   font-weight: 500;
   letter-spacing: 0.1rem;
   letter-spacing: 0.1rem;
-  margin-right: 2rem ;
-}
-
-
-///// Weather-Condition
-
-.weather-condition__text{
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-  margin-bottom: 3rem;
 
 }
+
 
 ///// Min Temperature
 

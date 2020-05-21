@@ -189,6 +189,8 @@ max-width: 15rem;
 // ////// SVG
 
 .menu__icon {
+  cursor: pointer;
+  pointer-events: auto;
   position: relative;
   height: 1.5rem;
   padding: 0.5rem 1.5rem;
