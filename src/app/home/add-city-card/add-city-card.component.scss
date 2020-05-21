@@ -38,11 +38,11 @@
   height: 12rem;
   cursor: pointer;
   pointer-events: auto;
-  fill: rgb(0, 255, 106)
+  fill: rgb(0, 255, 64)
 }
 
 .plus__icon:hover{
-  mask-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)) ;
+  mask-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)) ;
 }
 
 .city__icon{
