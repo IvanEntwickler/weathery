@@ -1,10 +1,13 @@
 <div class="root__container">
-<div class="side-menu_container" [ngClass]="{'side-menu__container-active': ''}">
-  <nav class="slide-menu" >
+<div class="side-menu__container" [ngClass]="{'side-menu__container-active': showMenu}" (click)="toggleMenu()">
+  <nav class="slide-menu" [ngClass]="{'slide-menu-active': showMenu}" (click)="$event.stopImmediatePropagation();" >
     <section class="menu-header">
-      <span class="greeting-text">Weathery Time!</span>
+      <span class="greeting__text">Weathery Time!</span>
       <div class="user-image__container">
-        <img src="" alt="user-image" class="user__image">
+        <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/PICA.jpg/100px-PICA.jpg"
+        alt="user-image" class="user__image"
+        >
       </div>
       <div class="user-details">
         <span class="name__text">Ivan</span>
@@ -19,9 +22,9 @@
     </section>
   </nav>
 </div>
-<div class="content__container">
+
   <header class="main__header">
-    <div class="left__section">
+    <div class="left__section" (click)="toggleMenu()">
       <svg class="menu__icon">
         <use xlink:href="./assets/img/sprite.svg#icon-menu"></use>
       </svg>
@@ -32,10 +35,10 @@
     </div>
     <h3 class="date__text">{{today | date}}</h3>
   </header>
-      <app-home></app-home>
+      <router-outlet></router-outlet>
     <footer class="main__footer">
       <small class="copyright__text">Copyright © 2020 IvanEntwickler</small>
     </footer>
 </div>
-</div>
+
 

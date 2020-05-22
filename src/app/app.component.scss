@@ -14,15 +14,13 @@
     position:fixed;
     overflow: hidden;
     pointer-events: none;
-    left:0;
-    top:0;
     width: 100%;
     height: 100%;
     z-index: 25;
 
 }
 
-.side-menu__container::active{
+.side-menu__container-active{
   pointer-events: auto;
 }
 
@@ -54,13 +52,11 @@
   left: 0;
   z-index: 10;
   height: 100%;
-  width: 90%;
+  width: 30%;
   background-color: white;
   box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
   transition: transform 300ms linear;
   will-change: transform;
-  background-color: orangered;
-
   grid-column: sidebar-start / sidebar-end;
   display: grid;
   grid-template-columns: 1fr;
@@ -75,88 +71,77 @@
 
 
 
-// .menu-header {
-//   background: linear-gradient(to right, #00FF9B, #5f84fb);
-//   display: grid;
-//   grid-template-rows: 1fr 4fr;
-//   grid-template-columns: 1fr 4fr;
-//   grid-template-areas: "greeting greeting" "image details";
-//   box-sizing: border-box;
-//   width: 100%;
-//   align-content: center;
-//   color: white;
-//   box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
-//}
-
-// .greeting__text {
-//   grid-area: greeting;
-//   font-size: 1.25rem;
-//   letter-spacing: 0.15rem;
-//   text-transform: uppercase;
-//   margin-top: 1rem;
-//   justify-self: center;
-//   align-self: center;
-// }
-// .user-details {
-//   grid-area: details;
-//   display: flex;
-//   flex-flow: column;
-//   margin-left: 1rem;
-//   align-self: center;
-// }
-
-// .name__text {
-//   font-size: 1.15rem;
-//   margin-bottom: 0.5rem;
-// }
-
-// .email__text {
-//   font-size: 0.9rem;
-//   letter-spacing: 0.1rem;
-// }
-
-// .menu-body {
-//   display: grid;
-//   width: 100%;
-// }
-
-// .profile-image__container {
-//   grid-area: image;
-//   margin-right: 0.5rem;
-//   border-radius: 50%;
-//   height: 4rem;
-//   width: 4rem;
-//   overflow: hidden;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: white;
-//   align-self: center;
-//   margin-left: 2rem;
-// }
-
-// .profile__image {
-//   max-width: 4rem;
-// }
-
-///// Content
-
-.content__container{
-  position:fixed;
-  overflow: hidden;
-  pointer-events: none;
-  left:0;
-  top:0;
+.menu-header {
+  background: linear-gradient(to right, #00FF9B, #5f84fb);
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: "greeting greeting" "image details";
+  box-sizing: border-box;
   width: 100%;
-  height: 100%;
-  z-index: 25;
+  align-content: center;
+  color: white;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
+}
+
+.greeting__text {
+  grid-area: greeting;
+  font-size: 1.25rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  justify-self: center;
+  align-self: center;
+}
+.user-details {
+  grid-area: details;
+  display: flex;
+  flex-flow: column;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+.name__text {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.email__text {
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+.menu-body {
+  display: grid;
+  width: 100%;
+}
+
+.user-image__container {
+  grid-area: image;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  align-self: center;
+  margin-left: 2rem;
+}
+
+.user__image {
+  max-width: 4rem;
 }
 
 // ////// Header
 .main__header {
 
     box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
-
+    position: fixed;
+    left:0;
+    top:0;
     margin: 0;
     align-items: center;
     transition: background-color 500ms linear;
@@ -190,7 +175,6 @@ max-width: 15rem;
 
 .menu__icon {
   cursor: pointer;
-  pointer-events: auto;
   position: relative;
   height: 1.5rem;
   padding: 0.5rem 1.5rem;
