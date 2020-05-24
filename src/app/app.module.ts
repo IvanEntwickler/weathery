@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { WeatherCardComponent } from './home/weather-card/weather-card.component';
 import { AddCityCardComponent } from './home/add-city-card/add-city-card.component';
 import { DetailsComponent } from './details/details.component';
-import { CityComponent } from './details/city/city.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +16,9 @@ import { CityComponent } from './details/city/city.component';
     WeatherCardComponent,
     AddCityCardComponent,
     DetailsComponent,
-    CityComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
