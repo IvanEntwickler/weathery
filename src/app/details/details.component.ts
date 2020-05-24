@@ -21,6 +21,7 @@ export class DetailsComponent implements OnInit {
     const todayNumberInWeek = new Date().getDay();
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     this.today = days[todayNumberInWeek];
+    console.log(this.today);
   }
 
 }
