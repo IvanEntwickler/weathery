@@ -2,23 +2,20 @@
   <span class="city_name">{{ cityName }}</span>
   <div class="weather-icon__container" [ngSwitch]= "true">
 
-    <svg class="sunny__icon" *ngSwitchCase="condition === 'Sunny'">
+    <svg class="sunny__icon" *ngSwitchCase="condition === 'Sunny' || condition 'Clear'">
       <use xlink:href="../../assets/img/sprite.svg#icon-sun"></use>
     </svg>
-    <svg class="snowy__icon" *ngSwitchCase="condition === 'Snowy'">
+    <svg class="snowy__icon" *ngSwitchCase="condition === 'Snow'">
       <use xlink:href="../../assets/img/sprite.svg#icon-snowy"></use>
     </svg>
-    <svg class="cloudy__icon" *ngSwitchCase="condition === 'Cloudy'">
+    <svg class="cloudy__icon" *ngSwitchCase="condition === 'Clouds'">
       <use xlink:href="../../assets/img/sprite.svg#icon-cloudy"></use>
     </svg>
-    <svg class="rainy__icon" *ngSwitchCase="condition === 'Rainy'">
+    <svg class="rainy__icon" *ngSwitchCase="condition === 'Rain' || condition 'Drizzle'">
       <use xlink:href="../../assets/img/sprite.svg#icon-rainy"></use>
     </svg>
-    <svg class="lightning__icon" *ngSwitchCase="condition === 'Thunder'">
+    <svg class="lightning__icon" *ngSwitchCase="condition === 'Storm'">
       <use xlink:href="../../assets/img/sprite.svg#icon-lightning"></use>
-    </svg>
-    <svg class="sunnyCloud__icon" *ngSwitchCase="condition === 'Sunny Cloudy'">
-      <use xlink:href="../../assets/img/sprite.svg#icon-cloudy1"></use>
     </svg>
   </div>
   <div class="condition__container">

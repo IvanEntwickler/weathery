@@ -66,7 +66,7 @@ getCurrentHum(city: string, metric: 'metric' | 'imperial' = 'metric'): Subject<n
   this.http.get(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${metric}&APPID=0b29194dd2d8dad338f79c617e40d853`)
     .subscribe((weather: any) => {
-      this.humSubject.next(+(weather.main.humidity));
+      this.humSubject.next(weather.main.humidity);
     });
   return this.humSubject;
 }
@@ -76,7 +76,7 @@ getCurrentWind(city: string, metric: 'metric' | 'imperial' = 'metric'): Subject<
   this.http.get(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${metric}&APPID=0b29194dd2d8dad338f79c617e40d853`)
     .subscribe((weather: any) => {
-      this.humSubject.next(Math.floor(+(weather.main.wind)));
+      this.humSubject.next(Math.floor(weather.wind.speed));
     });
   return this.humSubject;
 }

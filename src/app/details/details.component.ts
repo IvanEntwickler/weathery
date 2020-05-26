@@ -1,6 +1,4 @@
 import { WeatherService } from './../weather.service';
-import { DaysModel } from './../shared/days.model';
-import { DetailsModel } from './../shared/details.model';
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -12,9 +10,35 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit, OnDestroy {
-  details: DetailsModel;
-  days: DaysModel;
 
+  dayName1: string;
+  dayName2: string;
+  dayName3: string;
+  dayName4: string;
+  dayName5: string;
+  dayName6: string;
+  dayName7: string;
+
+  dayState1: string;
+  dayState2: string;
+  dayState3: string;
+  dayState4: string;
+  dayState5: string;
+  dayState6: string;
+  dayState7: string;
+
+  dayTemp1: number;
+  dayTemp2: number;
+  dayTemp3: number;
+  dayTemp4: number;
+  dayTemp5: number;
+  dayTemp6: number;
+  dayTemp7: number;
+
+  state: string;
+  temp: number;
+  hum: number;
+  wind: number;
   city: string;
   today: string;
 
@@ -36,67 +60,68 @@ export class DetailsComponent implements OnInit, OnDestroy {
       this.city = route.params.city;
       /// subcribing to state
       this.stateSubscribtion = this.weatherService.getWeatherState(this.city)
-      .subscribe((state) => this.details.state = state);
+      .subscribe((state) => this.state = state);
       /// subcribing to temp
       this.tempSubscribtion = this.weatherService.getCurrentTemp(this.city)
-      .subscribe((temp) => this.details.temp = temp);
+      .subscribe((temp) => this.temp = temp);
       /// subscribing to hum
       this.humiditySubscribtion = this.weatherService.getCurrentHum(this.city)
-      .subscribe((hum) => this.details.hum = hum);
+      .subscribe((hum) => this.hum = hum);
       /// subscribing to wind
       this.windSubscribtion = this.weatherService.getCurrentWind(this.city)
-      .subscribe((wind) => this.details.wind = wind);
+      .subscribe((wind) => this.wind = wind);
 
       /// subscribing to the forecast data
       this.forecastSubscribtion = this.weatherService.getForecast(this.city)
       .subscribe((data: any) => {
         console.log(data);
         // tslint:disable-next-line:prefer-const
-        for (let i of data) {
+        // tslint:disable-next-line:prefer-for-of
+        for (let i = 0; i < data.length; i++) {
           const date = new Date(data[i].dt_txt).getDay();
           console.log(days[date]);
           switch (date) {
             case 0:
               /// Sunday
-              this.days.dayName7 = days[date];
-              this.days.dayState7 = data[i].weather[0].main;
-              this.days.dayTemp7 = Math.round(data[i].main.temp);
+              this.dayName7 = days[date];
+              this.dayState7 = data[i].weather[0].main;
+              this.dayTemp7 = Math.round(data[i].main.temp);
               break;
             case 1:
               /// Monday
-              this.days.dayName1 = days[date];
-              this.days.dayState1 = data[i].weather[0].main;
-              this.days.dayTemp1 = Math.round(data[i].main.temp);
+              this.dayName1 = days[date];
+              this.dayState1 = data[i].weather[0].main;
+              this.dayTemp1 = Math.round(data[i].main.temp);
               break;
             case 2:
               /// Tuesday
-              this.days.dayName2 = days[date];
-              this.days.dayState2 = data[i].weather[0].main;
-              this.days.dayTemp2 = Math.round(data[i].main.temp);
+              this.dayName2 = days[date];
+              this.dayState2 = data[i].weather[0].main;
+              this.dayTemp2 = Math.round(data[i].main.temp);
               break;
             case 3:
               /// Wednesday
-              this.days.dayName3 = days[date];
-              this.days.dayState3 = data[i].weather[0].main;
-              this.days.dayTemp3 = Math.round(data[i].main.temp);
+              this.dayName3 = days[date];
+              this.dayState3 = data[i].weather[0].main;
+              this.dayTemp3 = Math.round(data[i].main.temp);
               break;
             case 4:
               /// Thursday
-              this.days.dayName4 = days[date];
-              this.days.dayState4 = data[i].weather[0].main;
-              this.days.dayTemp4 = Math.round(data[i].main.temp);
+              this.dayName4 = days[date];
+              this.dayState4 = data[i].weather[0].main;
+              this.dayTemp4 = Math.round(data[i].main.temp);
               break;
             case 5:
               /// Friday
-              this.days.dayName5 = days[date];
-              this.days.dayState5 = data[i].weather[0].main;
-              this.days.dayTemp5 = Math.round(data[i].main.temp);
+              this.dayName5 = days[date];
+              this.dayState5 = data[i].weather[0].main;
+              this.dayTemp5 = Math.round(data[i].main.temp);
               break;
             case 6:
               /// Saturday
-              this.days.dayName6 = days[date];
-              this.days.dayState6 = data[i].weather[0].main;
-              this.days.dayTemp6 = Math.round(data[i].main.temp);
+              this.dayName6 = days[date];
+              this.dayState6 = data[i].weather[0].main;
+              this.dayTemp6 = Math.round(data[i].main.temp);
           }
         }
       });
@@ -105,6 +130,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
   }
 
+  /// unsubscribe each Subscription
   ngOnDestroy() {
     this.tempSubscribtion.unsubscribe();
     this.stateSubscribtion.unsubscribe();
