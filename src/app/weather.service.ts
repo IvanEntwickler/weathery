@@ -86,7 +86,7 @@ getMaxTemp(city: string, metric: 'metric' | 'imperial' = 'metric'): Subject<numb
   let maxTemp: number;
 
   this.http.get(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${metric}&APPID=0b29194dd2d8dad338f79c617e40d853`)
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${metric}&APPID=0b29194dd2d8dad338f79c617e40d853`)
     .subscribe((weather: any) => {
       maxTemp = weather.list[0].main.temp;
       weather.list.forEach( value => {
@@ -104,7 +104,7 @@ getMinTemp(city: string, metric: 'metric' | 'imperial' = 'metric'): Subject<numb
   let minTemp: number;
 
   this.http.get(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${metric}&APPID=0b29194dd2d8dad338f79c617e40d853`)
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${metric}&APPID=0b29194dd2d8dad338f79c617e40d853`)
     .subscribe((weather: any) => {
       minTemp = weather.list[0].main.temp;
       weather.list.forEach( value => {
@@ -119,9 +119,9 @@ getMinTemp(city: string, metric: 'metric' | 'imperial' = 'metric'): Subject<numb
 
 /// calling API to get the whole Forecast Array for the 5 upcoming days
 getForecast(city: string, metric: 'metric' | 'imperial' = 'metric'): Subject<any[]> {
-  this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${metric}&APPID=0b29194dd2d8dad338f79c617e40d853`)
-  .subscribe((weather: any) => {
-    this.forecasteSubject.next(weather.list);
+  this.http.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${metric}&APPID=0b29194dd2d8dad338f79c617e40d853`)
+  .subscribe((data: any) => {
+    this.forecasteSubject.next(data.list);
   });
   return this.forecasteSubject;
 }

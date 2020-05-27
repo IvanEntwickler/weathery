@@ -78,52 +78,36 @@ export class DetailsComponent implements OnInit, OnDestroy {
         // tslint:disable-next-line:prefer-const
         // tslint:disable-next-line:prefer-for-of
         for (let i = 0; i < data.length; i++) {
-          const date = new Date(data[i].dt_txt).getDay();
-          console.log(days[date]);
-          switch (date) {
-            case 0:
-              /// Sunday
-              this.dayName7 = days[date];
-              this.dayState7 = data[i].weather[0].main;
-              this.dayTemp7 = Math.round(data[i].main.temp);
-              break;
-            case 1:
-              /// Monday
+            const date = new Date(data[i].dt_txt).getDay();
+            console.log(days[date]);
+
+            if (((date === todayNumberInWeek + 1) || (todayNumberInWeek === 6 && date === 0)) && !this.dayName1) {
               this.dayName1 = days[date];
               this.dayState1 = data[i].weather[0].main;
               this.dayTemp1 = Math.round(data[i].main.temp);
-              break;
-            case 2:
-              /// Tuesday
+
+            } else if (!!this.dayName1 && !this.dayName2 && days[date] !== this.dayName1) {
               this.dayName2 = days[date];
               this.dayState2 = data[i].weather[0].main;
               this.dayTemp2 = Math.round(data[i].main.temp);
-              break;
-            case 3:
-              /// Wednesday
+
+            } else if (!!this.dayName2 && !this.dayName3 && days[date] !== this.dayName2) {
               this.dayName3 = days[date];
               this.dayState3 = data[i].weather[0].main;
               this.dayTemp3 = Math.round(data[i].main.temp);
-              break;
-            case 4:
-              /// Thursday
+
+            } else if (!!this.dayName3 && !this.dayName4 && days[date] !== this.dayName3) {
               this.dayName4 = days[date];
               this.dayState4 = data[i].weather[0].main;
               this.dayTemp4 = Math.round(data[i].main.temp);
-              break;
-            case 5:
-              /// Friday
+
+            } else if (!!this.dayName4 && !this.dayName5 && days[date] !== this.dayName4) {
               this.dayName5 = days[date];
               this.dayState5 = data[i].weather[0].main;
               this.dayTemp5 = Math.round(data[i].main.temp);
-              break;
-            case 6:
-              /// Saturday
-              this.dayName6 = days[date];
-              this.dayState6 = data[i].weather[0].main;
-              this.dayTemp6 = Math.round(data[i].main.temp);
+
+            }
           }
-        }
       });
     });
 
@@ -131,7 +115,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   }
 
   /// unsubscribe each Subscription
-  ngOnDestroy() {
+ngOnDestroy() {
     this.tempSubscribtion.unsubscribe();
     this.stateSubscribtion.unsubscribe();
     this.forecastSubscribtion.unsubscribe();
