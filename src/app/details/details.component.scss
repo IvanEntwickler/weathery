@@ -1,0 +1,127 @@
+/// layout container
+
+.details__container{
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr);
+  grid-template-rows: 1fr;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  align-items: center;
+  justify-items: center;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background: white;
+  transition: opacity 300ms linear;
+
+
+}
+
+/// First Section (City, Temp, Wind, Humidity, State and City Illustation SVG)
+
+.first-details__container{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  width: 100rem;
+  height: 25rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 7.5%;
+  box-shadow: 0 0 2rem rgba(0,0,0, .1);
+  animation: 1.25s ease-in-out 0ms 1 fadein;
+
+}
+
+/// city-illustration
+
+.city-illustration__container{
+
+}
+
+/// City and Temp
+
+.city-and-temp__container{
+
+}
+
+/// City
+
+.city__container{
+
+}
+
+.city__text{
+
+}
+
+/// Temp
+
+.temp__container{
+
+}
+
+.temp__text{
+
+}
+
+/// State
+
+.weather-state__container{
+
+}
+
+.state__text{
+
+}
+
+/// Wind and Humidity
+
+.wind-and-hum__container{
+
+}
+
+/// Wind
+
+.wind__container{
+
+}
+
+.wind__text{
+
+}
+
+.wind__value{
+
+}
+
+/// Humidity
+
+.hum__container{
+
+}
+
+.hum__text{
+
+}
+
+.hum__value{
+
+}
+
+/// Second Section ( Weather ForeCast including Day Name, SVG Icon depending on State, Temp)
+
+.second-details__container{
+
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100rem;
+  height: 25rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 7.5%;
+  box-shadow: 0 0 2rem rgba(0,0,0, .1);
+  animation: 1.25s ease-in-out 0ms 1 fadein;
+}
