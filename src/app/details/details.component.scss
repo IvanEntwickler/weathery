@@ -23,13 +23,11 @@
 .first-details__container{
   display:grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr;
   width: 100rem;
-  height: 25rem;
-  background-color: white;
+  height: 19rem;
+  background-color: yellowgreen;
   padding: 2rem;
-  border-radius: 7.5%;
-  box-shadow: 0 0 2rem rgba(0,0,0, .1);
   animation: 1.25s ease-in-out 0ms 1 fadein;
 
 }
@@ -118,10 +116,10 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   width: 100rem;
-  height: 25rem;
-  background-color: white;
+  height: 19rem;
+  background-color: blue;
   padding: 2rem;
-  border-radius: 7.5%;
-  box-shadow: 0 0 2rem rgba(0,0,0, .1);
   animation: 1.25s ease-in-out 0ms 1 fadein;
+  display:flex;
+  align-items: center;
 }
