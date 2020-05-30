@@ -4,8 +4,8 @@
   display: grid;
   grid-template-columns: minmax(300px, 1fr);
   grid-template-rows: 1fr;
-  height: 100%;
-  width: 100%;
+  height: 90vh;
+  width: 100vw;
   position: absolute;
   align-items: center;
   justify-items: center;
@@ -26,17 +26,13 @@
   grid-template-rows: 1fr;
   width: 100rem;
   height: 19rem;
-  background-color: yellowgreen;
   padding: 2rem;
+  margin-top: 7.25rem;
   animation: 1.25s ease-in-out 0ms 1 fadein;
+  background-image: url(../../assets/img/silhouette-skyline-illustration_53876-78786.jpg);
 
 }
 
-/// city-illustration
-
-.city-illustration__container{
-
-}
 
 /// City and Temp
 
