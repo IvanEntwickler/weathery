@@ -1,24 +1,23 @@
 <div class="details__container">
   <section class="first-details__container">
-    <div class="city-and-temp__container">
-      <div class="city__container">
-        <span class="city__text">{{city}}</span>
-      </div>
-      <div class="temp__container">
-        <span class="temp__text">{{temp}}°</span>
-      </div>
+
+  <div class="city__container">
+      <span class="city__text">{{city}}</span>
+    </div>
+    <div class="infos_container">
+    <div class="temp__container">
+      <span class="temp__text">{{temp}}°</span>
     </div>
     <div class="weather-state__container">
       <span class="state__text">{{state}}</span>
-    </div>
-    <div class="wind-and-hum__container">
+  </div>
       <div class="wind__container">
-        <span class="wind__text">wind</span>
-        <span class="wind__value">{{wind}} km/h</span>
+        <span class="wind__text">wind:</span>
+        <span class="wind__value"> {{wind}} km/h</span>
       </div>
       <div class="hum__container">
-        <span class="hum__text">humidity</span>
-        <span class="hum__value">{{hum}} %</span>
+        <span class="hum__text">humidity:</span>
+        <span class="hum__value"> {{hum}} %</span>
       </div>
     </div>
   </section>
@@ -26,7 +25,7 @@
     <div class="day-weather__container" [ngSwitch]="true">
       <span class="day-name__text">{{dayName1}}</span>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState1 === 'Clouds'">
-        <use xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
+        <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState1 === 'Snow'">
         <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
@@ -46,7 +45,7 @@
     <div class="day-weather__container" [ngSwitch]="true">
       <span class="day-name__text">{{dayName2}}</span>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState2 === 'Clouds'">
-        <use xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
+        <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState2 === 'Snow'">
         <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
@@ -66,7 +65,7 @@
     <div class="day-weather__container" [ngSwitch]="true">
       <span class="day-name__text">{{dayName3}}</span>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState3 === 'Clouds'">
-        <use xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
+        <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState3 === 'Snow'">
         <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
@@ -86,7 +85,7 @@
     <div class="day-weather__container" [ngSwitch]="true">
       <span class="day-name__text">{{dayName4}}</span>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState4 === 'Clouds'">
-        <use xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
+        <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState4 === 'Snow'">
         <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
@@ -106,7 +105,7 @@
     <div class="day-weather__container" [ngSwitch]="true">
       <span class="day-name__text">{{dayName5}}</span>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState5 === 'Clouds'">
-        <use xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
+        <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState5 === 'Snow'">
         <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>

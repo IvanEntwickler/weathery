@@ -2,13 +2,14 @@
 
 .details__container{
   display: grid;
-  grid-template-columns: minmax(300px, 1fr);
-  grid-template-rows: 1fr;
-  height: 90vh;
-  width: 100vw;
+  grid-template-columns: minmax(240px, auto-fit);
+  grid-template-rows: repeat(3, 1fr);
+  height: 100%;
+  width: 100%;
   position: absolute;
   align-items: center;
   justify-items: center;
+
   top: 0;
   left: 0;
   z-index: -2;
@@ -22,86 +23,109 @@
 
 .first-details__container{
   display:grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(240px, auto);
   grid-template-rows: 1fr;
-  width: 100rem;
+  width: 65rem;
   height: 19rem;
   padding: 2rem;
-  margin-top: 7.25rem;
+  margin-top: 9rem;
   animation: 1.25s ease-in-out 0ms 1 fadein;
   background-image: url(../../assets/img/silhouette-skyline-illustration_53876-78786.jpg);
+  opacity: 0.85;
+  background-repeat: no-repeat;
+  background-position: 40% 32%;
+  background-size: 100%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.219);
+  border-radius: 1rem;
 
 }
 
 
 /// City and Temp
 
-.city-and-temp__container{
-
-}
 
 /// City
 
 .city__container{
-
+  display: flex;
+  justify-content: flex-end;
 }
 
 .city__text{
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  letter-spacing: 0.1rem;
 
+}
+
+.infos_container{
+  margin-bottom: 5rem;
 }
 
 /// Temp
 
 .temp__container{
+  display: flex;
+
 
 }
 
 .temp__text{
-
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  letter-spacing: 0.1rem;
 }
 
 /// State
 
 .weather-state__container{
+  display: flex;
 
 }
 
 .state__text{
-
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
 }
 
 /// Wind and Humidity
-
-.wind-and-hum__container{
-
-}
-
 /// Wind
 
 .wind__container{
-
+  display: flex;
 }
 
 .wind__text{
-
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
 }
 
 .wind__value{
-
+  margin: 0 .5rem;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
 }
 
 /// Humidity
 
 .hum__container{
-
+  display: flex;
 }
 
 .hum__text{
-
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
 }
 
 .hum__value{
-
+  margin: 0 .5rem;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
 }
 
 /// Second Section ( Weather ForeCast including Day Name, SVG Icon depending on State, Temp)
@@ -109,13 +133,41 @@
 .second-details__container{
 
   display:grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  width: 100rem;
+  grid-template-columns: minmax(240px, auto-fit);
+  grid-template-rows: auto;
+  width: 65rem;
   height: 19rem;
-  background-color: blue;
+  background-color: white;
   padding: 2rem;
   animation: 1.25s ease-in-out 0ms 1 fadein;
   display:flex;
   align-items: center;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.219);
+  border-radius: 1rem;
+}
+
+.day-weather__container{
+
+}
+
+.day-name__text{
+
+}
+
+.forecast-condition__icon{
+  max-width: 10rem;
+  height: auto;
+
+
+  &-cloudy{
+    fill:rgb(223, 204, 204);
+  }
+}
+
+.day-temp__text{
+
+}
+
+.day-state__text{
+
 }
