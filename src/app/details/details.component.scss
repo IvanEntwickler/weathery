@@ -19,6 +19,24 @@
 
 }
 
+/// back to home-comoponent arrow
+
+.back-to-home__container{
+position: absolute;
+top: 1%;
+left: -1%;
+max-width: 3.5rem;
+height: auto;
+padding: 1rem;
+margin: 0.8rem;
+fill: rgb(252, 2, 2);
+
+&:hover{
+  cursor: pointer;
+  opacity: 0.2;
+}
+}
+
 /// First Section (City, Temp, Wind, Humidity, State and City Illustation SVG)
 
 .first-details__container{
@@ -41,10 +59,18 @@
 }
 
 
-/// City and Temp
+
+/// City and Infos
+
+.infos-city__container{
+  display:flex;
+  justify-content: space-between;
+}
 
 
 /// City
+
+
 
 .city__container{
   display: flex;
@@ -58,15 +84,15 @@
 
 }
 
-.infos_container{
-  margin-bottom: 5rem;
-}
+/// Infos = Temp, State, Wind , Humidity
+
+// .infos__container{}
 
 /// Temp
 
 .temp__container{
   display: flex;
-
+  margin: .6rem 0;
 
 }
 
@@ -80,6 +106,7 @@
 
 .weather-state__container{
   display: flex;
+  margin: .6rem 0;
 
 }
 
@@ -94,6 +121,7 @@
 
 .wind__container{
   display: flex;
+  margin: .2rem 0;
 }
 
 .wind__text{
@@ -137,7 +165,7 @@
   grid-template-rows: auto;
   width: 65rem;
   height: 19rem;
-  background-color: white;
+  background-color: rgba(235, 246, 250, 0.795);
   padding: 2rem;
   animation: 1.25s ease-in-out 0ms 1 fadein;
   display:flex;
@@ -147,11 +175,20 @@
 }
 
 .day-weather__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1.5rem;
 
 }
 
 .day-name__text{
-
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
 }
 
 .forecast-condition__icon{
@@ -162,12 +199,32 @@
   &-cloudy{
     fill:rgb(223, 204, 204);
   }
+  &-snowy{
+    fill:lightblue;
+  }
+  &-rainy{
+    fill:rgb(3, 61, 88);
+  }
+  &-stormy{
+    fill:rgb(209, 231, 241);
+  }
+  &-sunny{
+    fill: gold;
+  }
 }
 
 .day-temp__text{
-
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  padding: .7rem;
 }
 
 .day-state__text{
-
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
 }

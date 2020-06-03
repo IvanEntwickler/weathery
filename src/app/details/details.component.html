@@ -1,10 +1,12 @@
+<svg class="back-to-home__container" (click)='goToHome()'>
+  <use xlink:href="../assets/img/sprite.svg#icon-chevron-with-circle-left"></use>
+</svg>
 <div class="details__container">
+
   <section class="first-details__container">
 
-  <div class="city__container">
-      <span class="city__text">{{city}}</span>
-    </div>
-    <div class="infos_container">
+    <div class="infos-city__container">
+    <div class="infos__container">
     <div class="temp__container">
       <span class="temp__text">{{temp}}°</span>
     </div>
@@ -20,6 +22,10 @@
         <span class="hum__value"> {{hum}} %</span>
       </div>
     </div>
+    <div class="city__container">
+      <span class="city__text">{{city}}</span>
+    </div>
+  </div>
   </section>
   <section class="second-details__container">
     <div class="day-weather__container" [ngSwitch]="true">
@@ -28,16 +34,16 @@
         <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState1 === 'Snow'">
-        <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
+        <use class="forecast-condition__icon-snowy" xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState1 === 'Rain' || dayState1 === 'Drizzle'">
-        <use xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
+        <use class="forecast-condition__icon-rainy" xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState1 === 'Storm'">
-        <use xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
+        <use class="forecast-condition__icon-stormy" xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState1 === 'Sunny' || dayState1 === 'Clear'">
-        <use xlink:href="../assets/img/sprite.svg#icon-sun"></use>
+        <use class="forecast-condition__icon-sunny" xlink:href="../assets/img/sprite.svg#icon-sun"></use>
       </svg>
       <span class="day-temp__text">{{dayTemp1}}°</span>
       <span class="day-state__text">{{dayState1}}</span>
@@ -48,16 +54,16 @@
         <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState2 === 'Snow'">
-        <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
+        <use class="forecast-condition__icon-snowy" xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState2 === 'Rain' || dayState2 === 'Drizzle'">
-        <use xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
+        <use class="forecast-condition__icon-rainy" xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState2 === 'Storm'">
-        <use xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
+        <use class="forecast-condition__icon-stormy" xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState2 === 'Sunny' || dayState2 === 'Clear'">
-        <use xlink:href="../assets/img/sprite.svg#icon-sun"></use>
+        <use class="forecast-condition__icon-sunny" xlink:href="../assets/img/sprite.svg#icon-sun"></use>
       </svg>
       <span class="day-temp__text">{{dayTemp2}}°</span>
       <span class="day-state__text">{{dayState2}}</span>
@@ -68,16 +74,16 @@
         <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState3 === 'Snow'">
-        <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
+        <use class="forecast-condition__icon-snowy" xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState3 === 'Rain' || dayState3 === 'Drizzle'">
-        <use xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
+        <use class="forecast-condition__icon-rainy" xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState3 === 'Storm'">
-        <use xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
+        <use class="forecast-condition__icon-stormy" xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState3 === 'Sunny' || dayState3 === 'Clear'">
-        <use xlink:href="../assets/img/sprite.svg#icon-sun"></use>
+        <use class="forecast-condition__icon-sunny" xlink:href="../assets/img/sprite.svg#icon-sun"></use>
       </svg>
       <span class="day-temp__text">{{dayTemp3}}°</span>
       <span class="day-state__text">{{dayState3}}</span>
@@ -88,16 +94,16 @@
         <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState4 === 'Snow'">
-        <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
+        <use class="forecast-condition__icon-snowy" xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState4 === 'Rain' || dayState4 === 'Drizzle'">
-        <use xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
+        <use class="forecast-condition__icon-rainy" xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState4 === 'Storm'">
-        <use xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
+        <use class="forecast-condition__icon-stormy" xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState4 === 'Sunny' || dayState4 === 'Clear'">
-        <use xlink:href="../assets/img/sprite.svg#icon-sun"></use>
+        <use class="forecast-condition__icon-sunny" xlink:href="../assets/img/sprite.svg#icon-sun"></use>
       </svg>
       <span class="day-temp__text">{{dayTemp4}}°</span>
       <span class="day-state__text">{{dayState4}}</span>
@@ -108,16 +114,16 @@
         <use class="forecast-condition__icon-cloudy" xlink:href="../assets/img/sprite.svg#icon-cloudy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState5 === 'Snow'">
-        <use xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
+        <use class="forecast-condition__icon-snowy" xlink:href="../assets/img/sprite.svg#icon-snowy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState5 === 'Rain' || dayState5 === 'Drizzle'">
-        <use xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
+        <use class="forecast-condition__icon-rainy" xlink:href="../assets/img/sprite.svg#icon-rainy"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState5 === 'Storm'">
-        <use xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
+        <use class="forecast-condition__icon-stormy" xlink:href="../assets/img/sprite.svg#icon-lightning"></use>
       </svg>
       <svg class="forecast-condition__icon" *ngSwitchCase="dayState5 === 'Sunny' || dayState5 === 'Clear'">
-        <use xlink:href="../assets/img/sprite.svg#icon-sun"></use>
+        <use class="forecast-condition__icon-sunny" xlink:href="../assets/img/sprite.svg#icon-sun"></use>
       </svg>
       <span class="day-temp__text">{{dayTemp5}}°</span>
       <span class="day-state__text">{{dayState5}}</span>

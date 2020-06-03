@@ -1,7 +1,7 @@
 import { WeatherService } from './../weather.service';
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -48,7 +48,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   windSubscribtion: Subscription;
   forecastSubscribtion: Subscription;
 
-  constructor(private activeRoute: ActivatedRoute, private weatherService: WeatherService) { }
+  constructor(private activeRoute: ActivatedRoute, private weatherService: WeatherService, private router: Router) { }
 
   ngOnInit() {
     //// getting the actual date string
@@ -113,6 +113,12 @@ export class DetailsComponent implements OnInit, OnDestroy {
 
 
   }
+
+  goToHome() {
+    this.router.navigate(['/home/:city']);
+  }
+
+
 
   /// unsubscribe each Subscription
 ngOnDestroy() {

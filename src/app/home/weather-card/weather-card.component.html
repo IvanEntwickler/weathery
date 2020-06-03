@@ -1,28 +1,28 @@
 <section class="weather-card">
-  <span class="city_name">{{ cityName }}</span>
+  <span class="city_name">{{ city }}</span>
   <div class="weather-icon__container" [ngSwitch]= "true">
 
-    <svg class="sunny__icon" *ngSwitchCase="condition === 'Sunny' || condition 'Clear'">
+    <svg class="sunny__icon" *ngSwitchCase="state === 'Sunny' || state 'Clear'">
       <use xlink:href="../../assets/img/sprite.svg#icon-sun"></use>
     </svg>
-    <svg class="snowy__icon" *ngSwitchCase="condition === 'Snow'">
+    <svg class="snowy__icon" *ngSwitchCase="state === 'Snow'">
       <use xlink:href="../../assets/img/sprite.svg#icon-snowy"></use>
     </svg>
-    <svg class="cloudy__icon" *ngSwitchCase="condition === 'Clouds'">
+    <svg class="cloudy__icon" *ngSwitchCase="state === 'Clouds'">
       <use xlink:href="../../assets/img/sprite.svg#icon-cloudy"></use>
     </svg>
-    <svg class="rainy__icon" *ngSwitchCase="condition === 'Rain' || condition 'Drizzle'">
+    <svg class="rainy__icon" *ngSwitchCase="state === 'Rain' || state 'Drizzle'">
       <use xlink:href="../../assets/img/sprite.svg#icon-rainy"></use>
     </svg>
-    <svg class="lightning__icon" *ngSwitchCase="condition === 'Storm'">
+    <svg class="lightning__icon" *ngSwitchCase="state === 'Storm'">
       <use xlink:href="../../assets/img/sprite.svg#icon-lightning"></use>
     </svg>
   </div>
   <div class="condition__container">
-    <span class="weather-condition__text">{{ condition }}</span>
+    <span class="weather-condition__text">{{ state }}</span>
   </div>
   <div class="temperature__container">
-    <span class="temperature__text">{{ currentTemp }}</span>
+    <span class="temperature__text">{{ temp }}</span>
     <span class="temperature__feature-text">°</span>
   </div>
 
